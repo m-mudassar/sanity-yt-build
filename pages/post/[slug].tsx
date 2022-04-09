@@ -18,7 +18,6 @@ interface Props {
 
 function Post({ post }: Props) {
   const [submitted, setSubmitted] = useState(false)
-  console.log(post.comments[0].comment)
   const {
     register,
     handleSubmit,
@@ -227,10 +226,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             image
         },
         "comments": *[
-      _type == "comment" &&
-      post._ref == ^._id && 
-      approved == true
-    ],
+        _type == "comment" &&
+        post._ref == ^._id && 
+        approved == true
+        ],
         description,
         mainImage,
         slug, 
